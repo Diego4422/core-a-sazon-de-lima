@@ -8,7 +8,7 @@ Core A V2.0 es una landing de portafolio para un restaurante peruano ficticio. L
 
 - HTML5 semántico con SEO local, Open Graph, imágenes responsivas y validación nativa.
 - Tailwind CSS v4.3.5 y CLI oficial. `css/input.css` define los tokens de marca mediante `@theme`, registra `index.html` y `js/main.js` como fuentes y aplica el reset de `@tailwindcss/forms` a los campos de reservas.
-- JavaScript nativo para el menú, los avisos por campo y el estado de validación. Los errores se asocian mediante `aria-invalid` y `aria-describedby`. El aviso general se anuncia como alerta. Con JavaScript desactivado, se mantiene la navegación y la validación nativa, seguida del aviso en la página. El formulario omite los nombres de los campos para que la petición local de respaldo carezca de sus valores.
+- JavaScript nativo para el menú, los avisos por campo y el estado de validación. Los errores se asocian mediante `aria-invalid` y `aria-describedby`. El aviso general se anuncia como alerta. La fecha mínima se calcula con el día local del navegador. Con JavaScript desactivado, se mantienen la navegación y las comprobaciones nativas estáticas. El aviso final pide verificar que la fecha sea hoy o posterior. El formulario omite los nombres de los campos para que la petición local de respaldo carezca de sus valores.
 - La interfaz responde a la preferencia de tema del sistema y a movimiento reducido. Emplea fuentes del sistema. La portada precarga el mismo conjunto WebP que selecciona la etiqueta `picture`.
 
 Referencias de implementación. [Tailwind CLI](https://tailwindcss.com/docs/installation/tailwind-cli) · [Plugin oficial de formularios](https://github.com/tailwindlabs/tailwindcss-forms)
@@ -50,7 +50,7 @@ La V2.0 genera un sitio estático listo para servir desde la raíz. La publicaci
 
 La documentación reutilizable del Bloque 2 incluye los formatos de oferta, un checklist de inicio y una estimación con un margen del 25 %. [Ficha freelance](docs/servicio-freelance.md) · [Propuesta comercial](docs/propuesta-comercial.pdf)
 
-## Verificación de V2.0
+## Verificación inicial de V2.0
 
 - La CLI oficial generó un `css/output.css` minificado de **27 630 bytes**. Recompilar tras retirar las tres hojas anteriores produjo el mismo SHA-256.
 - Chromium 156 pasó a 320, 375, 768, 1024 y 1440 px en claro y oscuro. Firefox 159 y WebKitGTK 2.54.2 pasaron a 320, 768 y 1440 px. En los anchos probados se verificaron la cuadrícula y la ausencia de scroll horizontal.

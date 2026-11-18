@@ -220,8 +220,8 @@
         <form class="grid min-w-0 gap-5 rounded-2xl border border-line bg-paper p-4 shadow-xs sm:grid-cols-2 sm:p-6 lg:p-8 dark:border-night-line dark:bg-ember" id="formulario-reserva" action="index.html#reserva-validada" method="get" aria-labelledby="reservas-titulo" aria-describedby="aviso-reserva">
           <div class="grid min-w-0 content-start gap-1.5 sm:col-span-2">
             <label class="text-sm font-bold" for="nombre">Nombre completo</label>
-            <input class="reservation-input" id="nombre" type="text" autocomplete="name" minlength="3" required>
-            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-nombre" hidden>Escribe un nombre de al menos 3 caracteres.</small>
+            <input class="reservation-input" id="nombre" type="text" autocomplete="name" minlength="3" pattern="\s*\S.+\S\s*" required>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-nombre" hidden>Escribe un nombre de al menos 3 caracteres, sin contar los espacios iniciales y finales.</small>
           </div>
           <div class="grid min-w-0 content-start gap-1.5">
             <label class="text-sm font-bold" for="correo">Correo electrónico</label>
@@ -230,14 +230,14 @@
           </div>
           <div class="grid min-w-0 content-start gap-1.5">
             <label class="text-sm font-bold" for="telefono">Teléfono</label>
-            <input class="reservation-input" id="telefono" type="tel" autocomplete="tel" pattern="[0-9+\s\-]{7,15}" aria-describedby="ayuda-telefono" required>
-            <small class="text-xs leading-normal text-muted dark:text-sand-muted" id="ayuda-telefono">De 7 a 15 caracteres (números, espacios, + o guion).</small>
-            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-telefono" hidden>Escribe un teléfono con el formato indicado.</small>
+            <input class="reservation-input" id="telefono" type="tel" autocomplete="tel" pattern="\s*(?:\+\s*)?[0-9](?:\s*(?:-\s*)?[0-9]){6,14}\s*" aria-describedby="ayuda-telefono" required>
+            <small class="text-xs leading-normal text-muted dark:text-sand-muted" id="ayuda-telefono">De 7 a 15 dígitos. Puedes usar + al inicio y espacios o guiones entre dígitos.</small>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-telefono" hidden>Escribe un teléfono de 7 a 15 dígitos con el formato indicado.</small>
           </div>
           <div class="grid min-w-0 content-start gap-1.5">
             <label class="text-sm font-bold" for="fecha">Fecha</label>
             <input class="reservation-input" id="fecha" type="date" required>
-            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-fecha" hidden>Elige una fecha válida.</small>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-fecha" hidden>Elige una fecha válida a partir de hoy.</small>
           </div>
           <div class="grid min-w-0 content-start gap-1.5">
             <label class="text-sm font-bold" for="hora">Hora</label>
@@ -247,7 +247,7 @@
           </div>
           <div class="grid min-w-0 content-start gap-1.5">
             <label class="text-sm font-bold" for="personas">Número de personas</label>
-            <input class="reservation-input" id="personas" type="number" min="1" max="12" required>
+            <input class="reservation-input" id="personas" type="number" inputmode="numeric" min="1" max="12" step="1" required>
             <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-personas" hidden>Escribe un número entero entre 1 y 12.</small>
           </div>
           <div class="min-w-0 sm:col-span-2">
@@ -256,7 +256,7 @@
             <p class="text-sm font-semibold text-danger not-empty:mt-2 dark:text-danger-night" id="error-reserva" role="alert"></p>
           </div>
           <noscript class="hidden has-[:target]:block sm:col-span-2">
-            <p class="hidden rounded-lg bg-success-soft p-3 text-sm font-semibold text-success target:block dark:bg-success-deep dark:text-success-night" id="reserva-validada" role="status" tabindex="-1">Validación exitosa. La demostración se completó.</p>
+            <p class="hidden rounded-lg bg-success-soft p-3 text-sm font-semibold text-success target:block dark:bg-success-deep dark:text-success-night" id="reserva-validada" role="status" tabindex="-1">Validación nativa completada. Comprueba que la fecha sea hoy o posterior.</p>
           </noscript>
         </form>
       </div>
