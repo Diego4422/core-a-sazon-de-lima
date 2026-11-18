@@ -51,3 +51,18 @@ La marca tipográfica permite usar la V1.5 antes de que estén listos ambos SVG.
 ## Publicación manual
 
 El director del proyecto gestiona Git, GitHub y Vercel desde Linux. En Vercel se sirve la carpeta que contiene `index.html` como sitio estático, sin paso de compilación. Cuando exista una URL pública, cambia `og:image` a la URL HTTPS absoluta de la fotografía y comprueba la previsualización social del sitio publicado.
+
+## Auditoría Lighthouse móvil
+
+Resultados obtenidos en Chromium Lighthouse, utilizando el modo Mobile:
+
+| Categoría | Puntuación |
+|---|---:|
+| Performance | 100 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+![Auditoría Lighthouse móvil de Sazón de Lima](docs/screenshots/lighthouse-mobile.png)
+
+> Resultados correspondientes a una ejecución de Lighthouse. Las puntuaciones pueden variar según el dispositivo y las condiciones de la prueba.
