@@ -1,10 +1,13 @@
 {
   "name": "core-a-sazon-de-lima",
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev:css": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "build:css": "tailwindcss -i ./css/input.css -o ./css/output.css --minify"
+    "prebuild:css": "node scripts/sync-catalog.js",
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/output.css --minify",
+    "test": "node --test"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.5",

@@ -1,0 +1,399 @@
+{
+  "version": "3.0.0",
+  "revision": "postauditoría",
+  "rama": "develop/v3.0",
+  "commit_base": "ec3232b1cfe1026756e299878d2d69c762a436fa",
+  "servidor_local": "http://127.0.0.1:8766/",
+  "compilacion": {
+    "comandos": [
+      "npm ci",
+      "npm run build:css",
+      "npm test",
+      "for script in js/*.js scripts/*.js test/*.test.js; do node --check \"$script\"; done"
+    ],
+    "node": "v24.22.3",
+    "tailwind_cli": "4.3.5",
+    "css_minificado_bytes": 33433,
+    "carta_html_y_css_reproducibles": true,
+    "pruebas_node": {
+      "tests": 9,
+      "pass": 9,
+      "fail": 0
+    }
+  },
+  "nu_html_checker": {
+    "version": "26.11.17 (a4bee0f)",
+    "messages": []
+  },
+  "navegador": {
+    "rutas_http_200": [
+      "assets/img/aji-de-gallina.png",
+      "assets/img/aji-de-gallina.webp",
+      "assets/img/arroz-con-pollo.png",
+      "assets/img/arroz-con-pollo.webp",
+      "assets/img/causa-limena.png",
+      "assets/img/causa-limena.webp",
+      "assets/img/ceviche-clasico.png",
+      "assets/img/ceviche-clasico.webp",
+      "assets/img/emplatado.png",
+      "assets/img/emplatado.webp",
+      "assets/img/favicon.svg",
+      "assets/img/hero-lomo-saltado-768.webp",
+      "assets/img/hero-lomo-saltado.png",
+      "assets/img/hero-lomo-saltado.webp",
+      "assets/img/lomo-saltado.png",
+      "assets/img/lomo-saltado.webp",
+      "assets/img/mesa-servida.png",
+      "assets/img/mesa-servida.webp",
+      "assets/img/og-image.jpg",
+      "assets/img/salon.png",
+      "assets/img/salon.webp",
+      "assets/img/tallarines-verdes.png",
+      "assets/img/tallarines-verdes.webp",
+      "css/output.css",
+      "data/platos.json",
+      "index.html",
+      "js/cart.js",
+      "js/data.js",
+      "js/main.js",
+      "js/storage.js",
+      "js/utils.js"
+    ],
+    "chromium": "157.0.8103.78",
+    "responsive": {
+      "light": [
+        {
+          "client": 305,
+          "columns": 1,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(167, 53, 42)",
+          "respects_reduced_motion": true,
+          "scheme": "light",
+          "scroll": 305,
+          "trigger": true,
+          "viewport": 320,
+          "dialog": {
+            "background": "rgb(255, 253, 249)",
+            "inner": 304,
+            "open": true,
+            "right": 320,
+            "scroll": 304,
+            "scrollLock": "hidden",
+            "width": 320,
+            "x": 0
+          }
+        },
+        {
+          "client": 360,
+          "columns": 1,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(167, 53, 42)",
+          "respects_reduced_motion": true,
+          "scheme": "light",
+          "scroll": 360,
+          "trigger": true,
+          "viewport": 375
+        },
+        {
+          "client": 625,
+          "columns": 1,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(167, 53, 42)",
+          "respects_reduced_motion": true,
+          "scheme": "light",
+          "scroll": 625,
+          "trigger": true,
+          "viewport": 640
+        },
+        {
+          "client": 753,
+          "columns": 2,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(167, 53, 42)",
+          "respects_reduced_motion": true,
+          "scheme": "light",
+          "scroll": 753,
+          "trigger": true,
+          "viewport": 768
+        },
+        {
+          "client": 1009,
+          "columns": 3,
+          "header": 73,
+          "nav": "block",
+          "pressed": "rgb(167, 53, 42)",
+          "respects_reduced_motion": true,
+          "scheme": "light",
+          "scroll": 1009,
+          "trigger": true,
+          "viewport": 1024
+        },
+        {
+          "client": 1425,
+          "columns": 3,
+          "header": 73,
+          "nav": "block",
+          "pressed": "rgb(167, 53, 42)",
+          "respects_reduced_motion": true,
+          "scheme": "light",
+          "scroll": 1425,
+          "trigger": true,
+          "viewport": 1440,
+          "dialog": {
+            "background": "rgb(255, 253, 249)",
+            "inner": 432,
+            "open": true,
+            "right": 1440,
+            "scroll": 432,
+            "scrollLock": "hidden",
+            "width": 448,
+            "x": 992
+          }
+        }
+      ],
+      "dark": [
+        {
+          "client": 305,
+          "columns": 1,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(241, 198, 111)",
+          "respects_reduced_motion": true,
+          "scheme": "dark",
+          "scroll": 305,
+          "trigger": true,
+          "viewport": 320,
+          "dialog": {
+            "background": "rgb(33, 27, 23)",
+            "inner": 304,
+            "open": true,
+            "right": 320,
+            "scroll": 304,
+            "scrollLock": "hidden",
+            "width": 320,
+            "x": 0
+          }
+        },
+        {
+          "client": 360,
+          "columns": 1,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(241, 198, 111)",
+          "respects_reduced_motion": true,
+          "scheme": "dark",
+          "scroll": 360,
+          "trigger": true,
+          "viewport": 375
+        },
+        {
+          "client": 625,
+          "columns": 1,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(241, 198, 111)",
+          "respects_reduced_motion": true,
+          "scheme": "dark",
+          "scroll": 625,
+          "trigger": true,
+          "viewport": 640
+        },
+        {
+          "client": 753,
+          "columns": 2,
+          "header": 73,
+          "nav": "none",
+          "pressed": "rgb(241, 198, 111)",
+          "respects_reduced_motion": true,
+          "scheme": "dark",
+          "scroll": 753,
+          "trigger": true,
+          "viewport": 768
+        },
+        {
+          "client": 1009,
+          "columns": 3,
+          "header": 73,
+          "nav": "block",
+          "pressed": "rgb(241, 198, 111)",
+          "respects_reduced_motion": true,
+          "scheme": "dark",
+          "scroll": 1009,
+          "trigger": true,
+          "viewport": 1024
+        },
+        {
+          "client": 1425,
+          "columns": 3,
+          "header": 73,
+          "nav": "block",
+          "pressed": "rgb(241, 198, 111)",
+          "respects_reduced_motion": true,
+          "scheme": "dark",
+          "scroll": 1425,
+          "trigger": true,
+          "viewport": 1440,
+          "dialog": {
+            "background": "rgb(33, 27, 23)",
+            "inner": 432,
+            "open": true,
+            "right": 1440,
+            "scroll": 432,
+            "scrollLock": "hidden",
+            "width": 448,
+            "x": 992
+          }
+        }
+      ]
+    },
+    "anclas_por_teclado": [
+      "#inicio",
+      "#nosotros",
+      "#carta",
+      "#experiencia",
+      "#reservas",
+      "#ubicacion"
+    ],
+    "flujo_pedido": {
+      "resultados": [
+        "lomo-saltado",
+        "aji-de-gallina",
+        "ceviche-clasico",
+        "arroz-con-pollo",
+        "tallarines-verdes",
+        "causa-limena"
+      ],
+      "filtros_combinados": true,
+      "suma": true,
+      "copia_nativa": true,
+      "copia_denegada_con_seleccion": true,
+      "wa_me_probado_sin_navegar": true,
+      "recarga_json_corrupto_y_registros_invalidos": true,
+      "vaciado_y_retorno_de_foco": true
+    },
+    "reserva_v2": true,
+    "axe_core": {
+      "light": {
+        "page": {
+          "passes": 27,
+          "version": "4.14.0",
+          "violations": []
+        },
+        "cart": {
+          "passes": 22,
+          "version": "4.14.0",
+          "violations": []
+        }
+      },
+      "dark": {
+        "page": {
+          "passes": 27,
+          "version": "4.14.0",
+          "violations": []
+        },
+        "cart": {
+          "passes": 22,
+          "version": "4.14.0",
+          "violations": []
+        }
+      }
+    },
+    "consola": [],
+    "almacenamiento_bloqueado": true,
+    "platos_sin_javascript": [
+      "lomo-saltado",
+      "aji-de-gallina",
+      "ceviche-clasico",
+      "arroz-con-pollo",
+      "tallarines-verdes",
+      "causa-limena"
+    ],
+    "carga_lenta": {
+      "http": 200,
+      "estado_de_carga": true,
+      "seis_platos_visibles_durante_carga": true,
+      "búsqueda_y_carrito_habilitados_al_completar": true
+    },
+    "fallos_y_respaldo": {
+      "falta": {
+        "http": 404,
+        "respaldo_interactivo": true,
+        "persistencia": true
+      },
+      "error-http": {
+        "http": 503,
+        "respaldo_interactivo": true,
+        "persistencia": true
+      },
+      "json-roto": {
+        "http": 200,
+        "respaldo_interactivo": true,
+        "persistencia": true
+      },
+      "esquema-roto": {
+        "http": 200,
+        "respaldo_interactivo": true,
+        "persistencia": true
+      },
+      "red-rota": {
+        "http": null,
+        "respaldo_interactivo": true,
+        "persistencia": true
+      }
+    },
+    "guardas_dom": {
+      "sin-control": {
+        "html_visible": 6,
+        "reserva_y_menu_activos": true,
+        "peticion_evitada": true
+      },
+      "sin-fila": {
+        "html_visible": 6,
+        "reserva_y_menu_activos": true,
+        "peticion_evitada": true
+      }
+    },
+    "dialogo_y_confirmacion": {
+      "temas": [
+        "light",
+        "dark"
+      ],
+      "cierre_exterior_y_foco": true,
+      "clic_interior_y_arrastre_no_cierran": true,
+      "confirmacion_visual_y_accesible": true
+    }
+  },
+  "lighthouse_movil": {
+    "version": "13.6.0",
+    "fecha_utc": "2026-11-18T18:08:50.828Z",
+    "perfil": "mobile",
+    "puntajes": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp_ms": 1579.04,
+    "cls": 0.00108005621796535,
+    "bytes_de_red": 433731,
+    "avisos": []
+  },
+  "sha256_archivos": {
+    "README.md": "3652cbacb518bf4bba7e232c6b624ce325514b22fefbd3bc59f1a62cc2c7f6d3",
+    "index.html": "ff9946e0bb6dc684cb8b72aa76aca1703d7357fdec7407df0e01b0c2d8f6c7b9",
+    "css/output.css": "b798c48976d629262e10841aabfce40c3145146dc5ce1301b12bca6a2599eacc",
+    "package.json": "dc741425fd3b90f653dd4f55676af91fa39fdb6211c4cafe96ab647609d949ef",
+    "js/main.js": "9cab1e1faac952817a61aacab800f1fbdd6e410c991561e5525eb74285a81c46",
+    "js/data.js": "69831bce481b21ee05366f69dba231590bf83a30d77feebbcc9a2ec9bf9a9029",
+    "js/storage.js": "bff1c6fcc20d18debcd359ae2bbf89a8f34ae16b8654162e35e11b12a1c31a9b",
+    "js/cart.js": "537b1ec3399e759d0053bb42fdd5c96402a87e5d83a41b141eced2f7ff89bf17",
+    "js/utils.js": "e2c20a8d1e9468a4068426585ba3331ec8cf25ac27b07a45a407e1905aa6a82f",
+    "test/core.test.js": "ba9d684f59a38c132f91c9696c430ddb1aec258a33cff70d69cd0530b18b36a0",
+    "data/platos.json": "5be54739322900faf1d21bfa1b6ec4b9dc37a15d0f2a78f1fab5a1be6b043463",
+    "scripts/sync-catalog.js": "c529558119cca29e47b9d62eb3d68f0e3fdcd71263c02f0ddb972212c66787c9"
+  }
+}

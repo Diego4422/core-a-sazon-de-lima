@@ -1,0 +1,130 @@
+[
+  {
+    "id": "lomo-saltado",
+    "category": "fondos",
+    "name": "Lomo Saltado",
+    "description": "Res salteada a fuego vivo con cebolla morada y tomate, servida con papas doradas y arroz.",
+    "ingredients": [
+      "res",
+      "cebolla morada",
+      "tomate",
+      "papas",
+      "arroz"
+    ],
+    "priceCents": 4200,
+    "image": {
+      "webp": "assets/img/lomo-saltado.webp",
+      "png": "assets/img/lomo-saltado.png",
+      "width": 640,
+      "height": 337,
+      "alt": "Lomo salteado con tomate y cebolla, acompañado de arroz y papas fritas"
+    }
+  },
+  {
+    "id": "aji-de-gallina",
+    "category": "fondos",
+    "name": "Ají de Gallina",
+    "description": "Pollo deshilachado en crema de ají amarillo, con arroz, papa, huevo y aceitunas.",
+    "ingredients": [
+      "pollo",
+      "ají amarillo",
+      "arroz",
+      "papa",
+      "huevo",
+      "aceitunas"
+    ],
+    "priceCents": 3600,
+    "image": {
+      "webp": "assets/img/aji-de-gallina.webp",
+      "png": "assets/img/aji-de-gallina.png",
+      "width": 576,
+      "height": 576,
+      "alt": "Ají de gallina con arroz, rodajas de papa, huevo y aceitunas negras"
+    }
+  },
+  {
+    "id": "ceviche-clasico",
+    "category": "entradas",
+    "name": "Ceviche Clásico",
+    "description": "Pescado al limón con ají y cebolla morada, acompañado de camote y cancha crocante.",
+    "ingredients": [
+      "pescado",
+      "limón",
+      "ají",
+      "cebolla morada",
+      "camote",
+      "cancha"
+    ],
+    "priceCents": 3800,
+    "image": {
+      "webp": "assets/img/ceviche-clasico.webp",
+      "png": "assets/img/ceviche-clasico.png",
+      "width": 640,
+      "height": 357,
+      "alt": "Ceviche de pescado con cebolla morada, ají, camote y cancha"
+    }
+  },
+  {
+    "id": "arroz-con-pollo",
+    "category": "fondos",
+    "name": "Arroz con Pollo",
+    "description": "Arroz al culantro con verduras, pollo dorado y un toque fresco de salsa criolla.",
+    "ingredients": [
+      "arroz",
+      "culantro",
+      "verduras",
+      "pollo",
+      "salsa criolla"
+    ],
+    "priceCents": 3400,
+    "image": {
+      "webp": "assets/img/arroz-con-pollo.webp",
+      "png": "assets/img/arroz-con-pollo.png",
+      "width": 576,
+      "height": 576,
+      "alt": "Presa de pollo dorada sobre arroz al culantro con salsa criolla"
+    }
+  },
+  {
+    "id": "tallarines-verdes",
+    "category": "fondos",
+    "name": "Tallarines Verdes con Bistec",
+    "description": "Pasta en salsa de albahaca, espinaca y queso fresco con bistec a la plancha.",
+    "ingredients": [
+      "pasta",
+      "albahaca",
+      "espinaca",
+      "queso fresco",
+      "bistec"
+    ],
+    "priceCents": 4000,
+    "image": {
+      "webp": "assets/img/tallarines-verdes.webp",
+      "png": "assets/img/tallarines-verdes.png",
+      "width": 640,
+      "height": 349,
+      "alt": "Tallarines en salsa verde con queso rallado y bistec dorado"
+    }
+  },
+  {
+    "id": "causa-limena",
+    "category": "entradas",
+    "name": "Causa Limeña",
+    "description": "Papa amarilla con limón y ají, rellena de pollo y palta.",
+    "ingredients": [
+      "papa amarilla",
+      "limón",
+      "ají",
+      "pollo",
+      "palta"
+    ],
+    "priceCents": 2600,
+    "image": {
+      "webp": "assets/img/causa-limena.webp",
+      "png": "assets/img/causa-limena.png",
+      "width": 576,
+      "height": 576,
+      "alt": "Causa de papa amarilla en capas, con relleno de pollo y palta"
+    }
+  }
+]
