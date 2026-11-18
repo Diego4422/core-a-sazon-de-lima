@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
 @source "../index.html";
-@source "../js/main.js";
+@source "../js";
 
 @plugin "@tailwindcss/forms" {
   strategy: "class";
