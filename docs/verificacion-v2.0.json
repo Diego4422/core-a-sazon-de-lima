@@ -1,0 +1,343 @@
+{
+  "version": "2.0.0",
+  "servidor_local": "http://127.0.0.1:8766/",
+  "build": {
+    "cli_tailwind": "4.3.5",
+    "css_bytes": 27630,
+    "css_sha256": "117f9c983bed832486b26a1d2e3d6964dc99ec8c336b1319b56c4418f9bc6844"
+  },
+  "nu_html_checker": {
+    "version": "26.11.17 (a4bee0f)",
+    "messages": []
+  },
+  "chromium": {
+    "rutas_http_200": 26,
+    "chromium": "156.0.8078.79",
+    "responsive": {
+      "light": [
+        {
+          "bodyText": "rgb(40, 35, 30)",
+          "brand": true,
+          "client": 305,
+          "columns": 1,
+          "formBg": "rgb(255, 253, 249)",
+          "formBorder": "rgb(136, 114, 97)",
+          "header": "rgb(255, 253, 249)",
+          "hero": "hero-lomo-saltado-768.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 43.84,
+          "htmlScheme": "light",
+          "overflow": [],
+          "panel": "none",
+          "scroll": 305,
+          "toggle": "flex",
+          "viewport": 320
+        },
+        {
+          "bodyText": "rgb(40, 35, 30)",
+          "brand": true,
+          "client": 360,
+          "columns": 1,
+          "formBg": "rgb(255, 253, 249)",
+          "formBorder": "rgb(136, 114, 97)",
+          "header": "rgb(255, 253, 249)",
+          "hero": "hero-lomo-saltado-768.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 46.975,
+          "htmlScheme": "light",
+          "overflow": [],
+          "panel": "none",
+          "scroll": 360,
+          "toggle": "flex",
+          "viewport": 375
+        },
+        {
+          "bodyText": "rgb(40, 35, 30)",
+          "brand": true,
+          "client": 753,
+          "columns": 2,
+          "formBg": "rgb(255, 253, 249)",
+          "formBorder": "rgb(136, 114, 97)",
+          "header": "rgb(255, 253, 249)",
+          "hero": "hero-lomo-saltado-768.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 69.376,
+          "htmlScheme": "light",
+          "overflow": [],
+          "panel": "none",
+          "scroll": 753,
+          "toggle": "flex",
+          "viewport": 768
+        },
+        {
+          "bodyText": "rgb(40, 35, 30)",
+          "brand": true,
+          "client": 1009,
+          "columns": 3,
+          "formBg": "rgb(255, 253, 249)",
+          "formBorder": "rgb(136, 114, 97)",
+          "header": "rgb(255, 253, 249)",
+          "hero": "hero-lomo-saltado.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 83.968,
+          "htmlScheme": "light",
+          "overflow": [],
+          "panel": "block",
+          "scroll": 1009,
+          "toggle": "none",
+          "viewport": 1024
+        },
+        {
+          "bodyText": "rgb(40, 35, 30)",
+          "brand": true,
+          "client": 1425,
+          "columns": 3,
+          "formBg": "rgb(255, 253, 249)",
+          "formBorder": "rgb(136, 114, 97)",
+          "header": "rgb(255, 253, 249)",
+          "hero": "hero-lomo-saltado.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 107.68,
+          "htmlScheme": "light",
+          "overflow": [],
+          "panel": "block",
+          "scroll": 1425,
+          "toggle": "none",
+          "viewport": 1440
+        }
+      ],
+      "dark": [
+        {
+          "bodyText": "rgb(255, 243, 228)",
+          "brand": true,
+          "client": 305,
+          "columns": 1,
+          "formBg": "rgb(33, 27, 23)",
+          "formBorder": "oklab(0.868048 0.0089466 0.0281616 / 0.6)",
+          "header": "rgb(33, 27, 23)",
+          "hero": "hero-lomo-saltado-768.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 43.84,
+          "htmlScheme": "dark",
+          "overflow": [],
+          "panel": "none",
+          "scroll": 305,
+          "toggle": "flex",
+          "viewport": 320
+        },
+        {
+          "bodyText": "rgb(255, 243, 228)",
+          "brand": true,
+          "client": 360,
+          "columns": 1,
+          "formBg": "rgb(33, 27, 23)",
+          "formBorder": "oklab(0.868048 0.0089466 0.0281616 / 0.6)",
+          "header": "rgb(33, 27, 23)",
+          "hero": "hero-lomo-saltado-768.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 46.975,
+          "htmlScheme": "dark",
+          "overflow": [],
+          "panel": "none",
+          "scroll": 360,
+          "toggle": "flex",
+          "viewport": 375
+        },
+        {
+          "bodyText": "rgb(255, 243, 228)",
+          "brand": true,
+          "client": 753,
+          "columns": 2,
+          "formBg": "rgb(33, 27, 23)",
+          "formBorder": "oklab(0.868048 0.0089466 0.0281616 / 0.6)",
+          "header": "rgb(33, 27, 23)",
+          "hero": "hero-lomo-saltado-768.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 69.376,
+          "htmlScheme": "dark",
+          "overflow": [],
+          "panel": "none",
+          "scroll": 753,
+          "toggle": "flex",
+          "viewport": 768
+        },
+        {
+          "bodyText": "rgb(255, 243, 228)",
+          "brand": true,
+          "client": 1009,
+          "columns": 3,
+          "formBg": "rgb(33, 27, 23)",
+          "formBorder": "oklab(0.868048 0.0089466 0.0281616 / 0.6)",
+          "header": "rgb(33, 27, 23)",
+          "hero": "hero-lomo-saltado.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 83.968,
+          "htmlScheme": "dark",
+          "overflow": [],
+          "panel": "block",
+          "scroll": 1009,
+          "toggle": "none",
+          "viewport": 1024
+        },
+        {
+          "bodyText": "rgb(255, 243, 228)",
+          "brand": true,
+          "client": 1425,
+          "columns": 3,
+          "formBg": "rgb(33, 27, 23)",
+          "formBorder": "oklab(0.868048 0.0089466 0.0281616 / 0.6)",
+          "header": "rgb(33, 27, 23)",
+          "hero": "hero-lomo-saltado.webp",
+          "heroColor": "rgb(255, 253, 249)",
+          "heroDownloads": 1,
+          "heroFontSize": 107.68,
+          "htmlScheme": "dark",
+          "overflow": [],
+          "panel": "block",
+          "scroll": 1425,
+          "toggle": "none",
+          "viewport": 1440
+        }
+      ]
+    },
+    "teclado_y_formulario": {
+      "anchors": [
+        "inicio",
+        "nosotros",
+        "carta",
+        "experiencia",
+        "reservas",
+        "ubicacion"
+      ],
+      "focusVisible": true,
+      "fields": [
+        "nombre",
+        "correo",
+        "telefono",
+        "fecha",
+        "hora",
+        "personas"
+      ],
+      "inlineErrors": true,
+      "demo": "Validación exitosa. La demostración se completó."
+    },
+    "axe_wcag_aa": {
+      "light": {
+        "passes": 26,
+        "version": "4.14.0",
+        "violations": []
+      },
+      "dark": {
+        "passes": 26,
+        "version": "4.14.0",
+        "violations": []
+      }
+    },
+    "advertencias_o_errores_de_consola": [],
+    "sin_javascript": [
+      "",
+      "block",
+      "Validación exitosa. La demostración se completó."
+    ]
+  },
+  "firefox": {
+    "navegador": "firefox",
+    "version": "159.0",
+    "responsive": [
+      {
+        "viewport": 320,
+        "ancho": 308,
+        "ancho_scroll": 308,
+        "fotos": 10,
+        "columnas": 1,
+        "telefono_rechaza_letras": true
+      },
+      {
+        "viewport": 768,
+        "ancho": 756,
+        "ancho_scroll": 756,
+        "fotos": 10,
+        "columnas": 2,
+        "telefono_rechaza_letras": true
+      },
+      {
+        "viewport": 1440,
+        "ancho": 1428,
+        "ancho_scroll": 1428,
+        "fotos": 10,
+        "columnas": 3,
+        "telefono_rechaza_letras": true
+      }
+    ]
+  },
+  "webkit": {
+    "navegador": "WebKitGTK (WebView sobre Xvfb)",
+    "version": "2.54.2",
+    "responsive": [
+      {
+        "viewport": 320,
+        "ancho": 320,
+        "ancho_scroll": 320,
+        "fotos": 10,
+        "columnas": 1,
+        "telefono_rechaza_letras": true
+      },
+      {
+        "viewport": 768,
+        "ancho": 768,
+        "ancho_scroll": 768,
+        "fotos": 10,
+        "columnas": 2,
+        "telefono_rechaza_letras": true
+      },
+      {
+        "viewport": 1440,
+        "ancho": 1440,
+        "ancho_scroll": 1440,
+        "fotos": 10,
+        "columnas": 3,
+        "telefono_rechaza_letras": true
+      }
+    ]
+  },
+  "simulacion_en_memoria": {
+    "ancla_existente": true,
+    "animacion_cta_movimiento_reducido": "none",
+    "animacion_tarjetas_movimiento_reducido": "none",
+    "formulario_antes_de_carta": true,
+    "original": "rgb(167, 53, 42)",
+    "recolor": "rgb(29, 90, 87)",
+    "validacion_nativa": true
+  },
+  "lighthouse_movil": {
+    "version": "13.6.0",
+    "ejecucion_utc": "2026-11-18T15:37:59.860Z",
+    "perfil": "mobile",
+    "emulacion": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "puntuaciones": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp_ms": 1457.22,
+    "cls": 0,
+    "bytes_de_red": 389560,
+    "advertencias": []
+  }
+}

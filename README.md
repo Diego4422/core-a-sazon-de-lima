@@ -1,68 +1,82 @@
 # Sazón de Lima | Cocina Criolla
 
-**Demo en vivo:** https://core-a-sazon-de-lima.vercel.app/
+Core A V2.0 es una landing de portafolio para un restaurante peruano ficticio. La carta presenta seis platos criollos con precios referenciales. El formulario permite probar la navegación y la validación de una reserva.
 
-**Repositorio:** https://github.com/Diego4422/core-a-sazon-de-lima
+[Demo pública de la versión estable](https://core-a-sazon-de-lima.vercel.app/) · [Repositorio](https://github.com/Diego4422/core-a-sazon-de-lima)
 
-Sazón de Lima es una landing page demostrativa para un restaurante peruano ficticio. Presenta seis platos criollos con precios referenciales, la experiencia del local y un formulario de reservas demostrativo.
+## Arquitectura
 
-## Tecnologías
+- HTML5 semántico con SEO local, Open Graph, imágenes responsivas y validación nativa.
+- Tailwind CSS v4.3.5 y CLI oficial. `css/input.css` define los tokens de marca mediante `@theme`, registra `index.html` y `js/main.js` como fuentes y aplica el reset de `@tailwindcss/forms` a los campos de reservas.
+- JavaScript nativo para el menú, los avisos por campo y el estado de validación. Los errores se asocian mediante `aria-invalid` y `aria-describedby`. El aviso general se anuncia como alerta. La fecha mínima se calcula con el día local del navegador. Con JavaScript desactivado, se mantienen la navegación y las comprobaciones nativas estáticas. El aviso final pide verificar que la fecha sea hoy o posterior. El formulario omite los nombres de los campos para que la petición local de respaldo carezca de sus valores.
+- La interfaz responde a la preferencia de tema del sistema y a movimiento reducido. Emplea fuentes del sistema. La portada precarga el mismo conjunto WebP que selecciona la etiqueta `picture`.
 
-- HTML5 semántico con metadatos SEO y Open Graph, imágenes responsivas y validación nativa del formulario.
-- CSS puro con BEM, variables de diseño, Flexbox y Grid. La maquetación parte de pantallas de 320 px y respeta la preferencia de movimiento reducido.
-- JavaScript nativo y opcional para el menú móvil y el aviso de validación. Con JavaScript desactivado, el menú permanece visible y el formulario vuelve a la página con un aviso tras superar la validación. Los campos carecen de `name` para que sus valores queden fuera de la URL y de la petición.
+Referencias de implementación. [Tailwind CLI](https://tailwindcss.com/docs/installation/tailwind-cli) · [Plugin oficial de formularios](https://github.com/tailwindlabs/tailwindcss-forms)
 
 ## Estructura
 
 ```text
 sazon-de-lima/
-├── .gitignore
-├── README.md
 ├── index.html
-├── assets/
-│   └── img/        # Diez fotos en WebP y PNG, más un WebP móvil del hero
+├── package.json
+├── package-lock.json
+├── assets/img/     # WebP, PNG, favicon SVG y tarjeta social JPEG
 ├── css/
-│   ├── reset.css
-│   ├── variables.css
-│   └── styles.css
-└── js/
-    └── main.js
+│   ├── input.css   # Fuente de Tailwind, tokens y ajustes locales
+│   └── output.css  # CSS minificado para producción
+├── js/main.js
+└── docs/          # Verificación, ficha freelance y auditoría histórica
 ```
 
-## Vista local en Linux
+## Revisar en Linux
 
-Abre una terminal en `sazon-de-lima/` y ejecuta:
+Desde la raíz, con Node.js, npm y Python 3 disponibles, ejecuta:
 
 ```bash
+npm ci
+npm run build:css
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Abre [http://127.0.0.1:8000/](http://127.0.0.1:8000/) en el navegador. También puedes servir `index.html` desde Live Server en VS Code.
+Abre [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Si solo quieres revisar la entrega, puedes iniciar el servidor directamente, ya que `css/output.css` está incluido. Durante la edición, ejecuta `npm run dev:css` en una segunda terminal para vigilar los cambios. Antes de preparar una revisión, vuelve a generar el archivo minificado con `npm run build:css`. `package-lock.json` fija las dependencias y `node_modules/` queda excluido del repositorio.
 
-## Fotografías e identidad
+## Activos e identidad
 
-La portada utiliza la primera foto adjunta, un lomo saltado humeante. La toma de mesa servida aparece en Experiencia. Cada foto se entrega como WebP y con un PNG de respaldo. La portada tiene dos tamaños WebP. Las nueve fotos restantes se cargan de forma diferida.
+Las diez fotografías conservan su WebP y su respaldo PNG. La portada usa el lomo saltado humeante con prioridad alta. Las otras nueve fotos se cargan de forma diferida y conservan sus dimensiones declaradas. La cabecera combina la marca tipográfica con el SVG existente, `assets/img/favicon.svg`. Se conserva `assets/img/og-image.jpg` y su URL Open Graph absoluta. Un futuro SVG exclusivo para el logotipo puede sustituir el icono decorativo dentro del enlace de marca.
 
-- **Logo definitivo.** Guarda el futuro `logo.svg` en `assets/img/` e insértalo dentro de `.header__brand`, con sus dimensiones y un nombre accesible para el enlace. El contenedor Flexbox ya reserva espacio para la marca. El SVG aportará una identidad visual propia.
-- **Favicon definitivo.** Guarda `favicon.svg` en `assets/img/` y cambia el enlace vacío del encabezado HTML por `<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">`. El icono facilitará reconocer la pestaña y el sitio en marcadores.
+## Publicación manual y lanzamiento
 
-La marca tipográfica permite usar la V1.5 antes de que estén listos ambos SVG. Su incorporación se limita al encabezado HTML y a los dos nuevos archivos, sin refactorizar la maquetación.
+La V2.0 genera un sitio estático listo para servir desde la raíz. La publicación existente de Vercel puede seguir sirviendo `index.html` y `css/output.css` directamente. El director del proyecto controla Git, GitHub y Vercel.
 
-## Publicación manual
+La documentación reutilizable del Bloque 2 incluye los formatos de oferta, un checklist de inicio y una estimación con un margen del 25 %. [Ficha freelance](docs/servicio-freelance.md) · [Propuesta comercial](docs/propuesta-comercial.pdf)
 
-El director del proyecto gestiona Git, GitHub y Vercel desde Linux. En Vercel se sirve la carpeta que contiene `index.html` como sitio estático, sin paso de compilación. Cuando exista una URL pública, cambia `og:image` a la URL HTTPS absoluta de la fotografía y comprueba la previsualización social del sitio publicado.
+## Verificación inicial de V2.0
 
-## Auditoría Lighthouse móvil
+- La CLI oficial generó un `css/output.css` minificado de **27 630 bytes**. Recompilar tras retirar las tres hojas anteriores produjo el mismo SHA-256.
+- Chromium 156 pasó a 320, 375, 768, 1024 y 1440 px en claro y oscuro. Firefox 159 y WebKitGTK 2.54.2 pasaron a 320, 768 y 1440 px. En los anchos probados se verificaron la cuadrícula y la ausencia de scroll horizontal.
+- Se verificaron las seis anclas, el manejo del menú con teclado, la validación y los avisos del formulario, el comportamiento sin JavaScript y la preferencia de movimiento reducido. axe-core 4.14.0 no reportó infracciones en las reglas WCAG A/AA ejecutadas en ninguno de los dos temas.
+- Las 26 rutas locales comprobadas respondieron HTTP 200. Nu HTML Checker produjo cero avisos o errores y Chromium registró cero mensajes de error o advertencia en consola.
+- La simulación con una paleta de prueba y el formulario antes de la carta conservó la referencia por ancla y la validación. Se ejecutó en el navegador, sobre el DOM y los tokens en memoria.
 
-Resultados obtenidos en Chromium Lighthouse, utilizando el modo Mobile:
-
-| Categoría | Puntuación |
+| Lighthouse 13.6.0 móvil | Puntuación |
 |---|---:|
-| Performance | 100 |
-| Accessibility | 100 |
-| Best Practices | 100 |
+| Rendimiento | 100 |
+| Accesibilidad | 100 |
+| Buenas prácticas | 100 |
 | SEO | 100 |
 
-![Auditoría Lighthouse móvil de Sazón de Lima](docs/screenshots/lighthouse-mobile.png)
+La ejecución local registró LCP de 1,46 s y CLS de 0. [Evidencia de verificación](docs/verificacion-v2.0.json)
 
-> Resultados correspondientes a una ejecución de Lighthouse. Las puntuaciones pueden variar según el dispositivo y las condiciones de la prueba.
+### Errores corregidos
+
+- Se renombró el token tipográfico de portada a `--text-display`. `text-hero` coincidía con el nombre de un token de color y la portada perdía tamaño y contraste.
+- Se integró el reset `form-input` en la misma regla que aplica los tokens de los campos. Esto recuperó los colores de marca y el contorno de foco.
+- El menú móvil y su versión sin JavaScript comparten una cuadrícula de tres columnas. El contenido sigue en el flujo en la versión sin JavaScript y las anclas se desplazan con el espacio que ocupa el encabezado.
+
+El repositorio carece de un prototipo Figma de referencia. La revisión visual se hizo con capturas del sitio renderizado en claro y oscuro.
+
+## Auditoría histórica de V1.5
+
+El siguiente registro histórico corresponde a una ejecución móvil de la versión estable anterior. Registró 100 en rendimiento, accesibilidad, buenas prácticas y SEO.
+
+![Auditoría Lighthouse móvil de V1.5](docs/screenshots/lighthouse-mobile.png)
