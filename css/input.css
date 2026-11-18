@@ -1,0 +1,103 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../js/main.js";
+
+@plugin "@tailwindcss/forms" {
+  strategy: "class";
+}
+
+@theme {
+  --color-primary: #a7352a;
+  --color-primary-dark: #85281f;
+  --color-secondary: #d6a32d;
+  --color-cream: #f5ebdd;
+  --color-paper: #fffdf9;
+  --color-ink: #28231e;
+  --color-muted: #625347;
+  --color-line: #ddcdb9;
+  --color-control: #887261;
+  --color-hero: #130d0a;
+  --color-night: #211b17;
+  --color-ember: #342a23;
+  --color-night-line: #705a47;
+  --color-sand: #fff3e4;
+  --color-sand-muted: #e0d1bf;
+  --color-gold: #f1c66f;
+  --color-danger: #9b2623;
+  --color-danger-night: #ffb6a6;
+  --color-success: #284d32;
+  --color-success-soft: #edf3e8;
+  --color-success-night: #c8e8cc;
+  --color-success-deep: #254132;
+
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-display: clamp(2.7rem, 1.6rem + 5.7vw, 6.75rem);
+  --text-section: clamp(2.125rem, 1.5rem + 2.5vw, 3.625rem);
+  --text-lead: clamp(1.0625rem, 1rem + 0.45vw, 1.375rem);
+
+  --container-content: 74rem;
+  --spacing-gutter: clamp(1rem, 4vw, 2.5rem);
+  --spacing-section: clamp(3.5rem, 7vw, 6.75rem);
+  --spacing-layout: clamp(2rem, 5vw, 4.5rem);
+  --animate-arrive: arrive 260ms ease-out both;
+
+  @keyframes arrive {
+    from { transform: translateY(0.25rem); }
+    to { transform: translateY(0); }
+  }
+}
+
+@layer base {
+  :focus-visible {
+    outline: 3px solid var(--focus-color, var(--color-primary-dark));
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .hero-shade {
+    background: linear-gradient(0deg, #130d0a 8%, #130d0aee 25%, #130d0abf 47%, #130d0a14 79%);
+  }
+
+  @media (width >= 48rem) {
+    .hero-shade {
+      background:
+        linear-gradient(90deg, #130d0a 13%, #130d0af2 23%, #130d0ad6 35%, #130d0a66 59%, #130d0a12 88%),
+        linear-gradient(0deg, #130d0a66, transparent 42%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .enter-card {
+        animation: arrive linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 35%;
+      }
+    }
+  }
+
+  .action {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-center text-sm font-bold motion-safe:transition-transform motion-safe:duration-150 motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0;
+  }
+
+  .reservation-input {
+    @apply form-input block min-h-12 w-full min-w-0 rounded-lg border-control bg-paper px-3 py-2 text-base text-ink focus:border-primary focus:ring-0 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-primary-dark dark:focus-visible:outline-gold user-invalid:border-danger user-valid:border-success aria-invalid:border-danger dark:border-sand-muted/60 dark:bg-night dark:text-sand dark:focus:border-gold dark:user-invalid:border-danger-night dark:user-valid:border-success-night dark:aria-invalid:border-danger-night;
+  }
+}
+
+/* El menú absoluto evita mover el Hero al iniciar el script. Sin JS queda en el flujo. */
+@media (scripting: none) and (width < 64rem) {
+  html {
+    scroll-padding-top: 11rem;
+  }
+
+  [data-menu-panel] {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding: 0 0 0.375rem;
+    border-bottom: 0;
+  }
+}

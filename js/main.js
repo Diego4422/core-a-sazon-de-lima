@@ -1,5 +1,5 @@
-const toggle = document.querySelector('.header__toggle');
-const header = toggle.closest('.header');
+const toggle = document.querySelector('[data-menu-toggle]');
+const header = toggle.closest('[data-site-header]');
 const navigation = document.querySelector('#navegacion');
 
 function setMenuExpanded(expanded) {
@@ -8,7 +8,6 @@ function setMenuExpanded(expanded) {
 
 setMenuExpanded(false);
 toggle.hidden = false;
-document.documentElement.classList.add('site--enhanced');
 
 toggle.addEventListener('click', () => {
   setMenuExpanded(toggle.getAttribute('aria-expanded') === 'false');
@@ -35,9 +34,49 @@ header.addEventListener('focusout', (event) => {
 
 const bookingForm = document.querySelector('#formulario-reserva');
 const bookingStatus = document.querySelector('#estado-reserva');
+const bookingAlert = document.querySelector('#error-reserva');
+
+function setFieldError(input, invalid) {
+  const error = document.getElementById(`error-${input.id}`);
+  const descriptions = new Set((input.getAttribute('aria-describedby') || '').split(/\s+/).filter(Boolean));
+
+  error.hidden = !invalid;
+  if (invalid) {
+    descriptions.add(error.id);
+    input.setAttribute('aria-invalid', 'true');
+  } else {
+    descriptions.delete(error.id);
+    input.removeAttribute('aria-invalid');
+  }
+
+  if (descriptions.size) {
+    input.setAttribute('aria-describedby', [...descriptions].join(' '));
+  } else {
+    input.removeAttribute('aria-describedby');
+  }
+}
+
+bookingForm.addEventListener('invalid', (event) => {
+  setFieldError(event.target, true);
+  bookingStatus.textContent = '';
+  bookingAlert.textContent ||= 'Revisa los campos señalados.';
+}, true);
+
+bookingForm.addEventListener('input', (event) => {
+  const input = event.target;
+  bookingStatus.textContent = '';
+
+  if (input.hasAttribute('aria-invalid') && input.validity.valid) {
+    setFieldError(input, false);
+  }
+  if (!bookingForm.querySelector('[aria-invalid="true"]')) {
+    bookingAlert.textContent = '';
+  }
+});
 
 bookingForm.addEventListener('submit', (event) => {
   event.preventDefault();
+  bookingForm.querySelectorAll('[aria-invalid="true"]').forEach((input) => setFieldError(input, false));
+  bookingAlert.textContent = '';
   bookingStatus.textContent = 'Validación exitosa. La demostración se completó.';
 });
-

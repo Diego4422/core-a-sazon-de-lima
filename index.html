@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es-PE">
+<html lang="es-PE" class="scroll-pt-22 scroll-smooth scheme-light motion-reduce:scroll-auto lg:scroll-pt-24 dark:scheme-dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,284 +13,293 @@
   <meta property="og:image" content="https://core-a-sazon-de-lima.vercel.app/assets/img/og-image.jpg">
   <meta property="og:image:alt" content="Lomo saltado humeante con papas doradas y arroz">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-lomo-saltado-768.webp 768w, assets/img/hero-lomo-saltado.webp 1440w" imagesizes="100vw">
+  <link rel="stylesheet" href="css/output.css">
   <script src="js/main.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#contenido">Ir al contenido</a>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="header__brand" href="#inicio">
-  <img class="header__brand-icon"
-       src="assets/img/favicon.svg"
-       width="44"
-       height="44"
-       alt=""
-       aria-hidden="true">
-  <span class="header__brand-text">
-    Sazón de Lima
-    <span class="header__brand-sub">Cocina Criolla</span>
-  </span>
-</a>
-      <button class="header__toggle" type="button" aria-controls="navegacion" aria-expanded="true" hidden>
-        <span class="header__toggle-icon" aria-hidden="true"></span>
+<body class="bg-cream font-sans text-base leading-relaxed text-ink dark:bg-night dark:text-sand dark:[--focus-color:var(--color-gold)]">
+  <a class="fixed start-gutter top-2 z-30 -translate-y-[160%] rounded-lg bg-paper px-4 py-2 font-bold text-primary-dark focus:translate-y-0 dark:bg-ember dark:text-gold" href="#contenido">Ir al contenido</a>
+  <header data-site-header class="sticky top-0 z-20 border-b border-line bg-paper dark:border-night-line dark:bg-night">
+    <div class="mx-auto w-full max-w-content px-gutter flex min-h-18 flex-wrap items-center justify-between gap-x-2">
+      <a class="flex min-w-0 items-center gap-2.5 rounded-sm py-3" href="#inicio">
+        <img class="size-10 shrink-0 rounded-full sm:size-11" src="assets/img/favicon.svg" width="44" height="44" alt="">
+        <span class="min-w-0 font-serif text-[clamp(1.25rem,1rem+1vw,1.75rem)] leading-none font-bold tracking-tight">
+          Sazón de Lima
+          <span class="mt-1 block font-sans text-[0.625rem] leading-snug font-bold tracking-[0.16em] text-primary-dark uppercase sm:text-[0.6875rem] dark:text-gold">Cocina Criolla</span>
+        </span>
+      </a>
+      <button class="peer inline-flex min-h-11 shrink-0 cursor-pointer items-center gap-2 rounded-full border border-control px-3 text-sm font-bold hover:bg-cream active:bg-line lg:hidden dark:border-night-line dark:hover:bg-ember dark:active:bg-night-line" data-menu-toggle type="button" aria-controls="navegacion" aria-expanded="true" hidden>
+        <svg class="size-4 fill-none stroke-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke-width="2" stroke-linecap="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
         Menú
       </button>
-      <nav class="header__nav" id="navegacion" aria-label="Navegación principal">
-        <ul class="header__links">
-          <li><a class="header__link" href="#inicio">Inicio</a></li>
-          <li><a class="header__link" href="#nosotros">Nosotros</a></li>
-          <li><a class="header__link" href="#carta">Carta</a></li>
-          <li><a class="header__link" href="#experiencia">Experiencia</a></li>
-          <li><a class="header__link" href="#reservas">Reservas</a></li>
-          <li><a class="header__link" href="#ubicacion">Ubicación</a></li>
+      <nav class="absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] basis-full overflow-y-auto border-y border-line bg-paper px-gutter py-2 max-lg:peer-aria-[expanded=false]:hidden lg:static lg:max-h-none lg:basis-auto lg:overflow-visible lg:border-0 lg:p-0 dark:border-night-line dark:bg-night" id="navegacion" data-menu-panel aria-label="Navegación principal">
+        <ul class="grid list-none grid-cols-3 gap-x-1 lg:flex lg:items-center lg:gap-x-3">
+          <li><a class="inline-flex min-h-11 w-full items-center rounded-lg px-1.5 text-sm font-semibold wrap-anywhere hover:bg-cream sm:px-2 lg:w-auto hover:text-primary-dark active:bg-line dark:hover:bg-ember dark:hover:text-gold dark:active:bg-night-line" href="#inicio">Inicio</a></li>
+          <li><a class="inline-flex min-h-11 w-full items-center rounded-lg px-1.5 text-sm font-semibold wrap-anywhere hover:bg-cream sm:px-2 lg:w-auto hover:text-primary-dark active:bg-line dark:hover:bg-ember dark:hover:text-gold dark:active:bg-night-line" href="#nosotros">Nosotros</a></li>
+          <li><a class="inline-flex min-h-11 w-full items-center rounded-lg px-1.5 text-sm font-semibold wrap-anywhere hover:bg-cream sm:px-2 lg:w-auto hover:text-primary-dark active:bg-line dark:hover:bg-ember dark:hover:text-gold dark:active:bg-night-line" href="#carta">Carta</a></li>
+          <li><a class="inline-flex min-h-11 w-full items-center rounded-lg px-1.5 text-sm font-semibold wrap-anywhere hover:bg-cream sm:px-2 lg:w-auto hover:text-primary-dark active:bg-line dark:hover:bg-ember dark:hover:text-gold dark:active:bg-night-line" href="#experiencia">Experiencia</a></li>
+          <li><a class="inline-flex min-h-11 w-full items-center rounded-full px-1.5 text-sm font-bold text-primary-dark sm:px-3 lg:w-auto hover:bg-cream active:bg-line lg:border lg:border-line dark:text-gold dark:hover:bg-ember dark:active:bg-night-line dark:lg:border-night-line" href="#reservas">Reservas</a></li>
+          <li><a class="inline-flex min-h-11 w-full items-center rounded-lg px-1.5 text-sm font-semibold wrap-anywhere hover:bg-cream sm:px-2 lg:w-auto hover:text-primary-dark active:bg-line dark:hover:bg-ember dark:hover:text-gold dark:active:bg-night-line" href="#ubicacion">Ubicación</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="contenido" tabindex="-1">
-    <section class="hero" id="inicio" aria-labelledby="hero-titulo" tabindex="-1">
-      <picture class="hero__picture">
+    <section class="relative isolate grid min-h-[35rem] items-end overflow-hidden border-b-4 border-secondary bg-hero text-paper md:min-h-[clamp(34rem,47vw,45rem)] md:items-center [--focus-color:var(--color-gold)]" id="inicio" aria-labelledby="hero-titulo" tabindex="-1">
+      <picture class="absolute inset-0 -z-10 md:left-[13%]">
         <source type="image/webp" srcset="assets/img/hero-lomo-saltado-768.webp 768w, assets/img/hero-lomo-saltado.webp 1440w" sizes="100vw">
-        <img class="hero__image" src="assets/img/hero-lomo-saltado.png" width="1440" height="960" fetchpriority="high" alt="Lomo saltado humeante con papas doradas, cebolla morada y arroz">
+        <img class="h-full w-full object-cover object-[51%_center] md:object-[58%_56%]" src="assets/img/hero-lomo-saltado.png" width="1440" height="960" fetchpriority="high" alt="Lomo saltado humeante con papas doradas, cebolla morada y arroz">
       </picture>
-      <div class="container hero__content">
-        <h1 class="hero__title" id="hero-titulo">Sazón de Lima <span class="hero__subtitle">— Cocina Criolla</span></h1>
-        <p class="hero__lead">Tradición peruana en cada plato.</p>
-        <div class="hero__actions">
-          <a class="button" href="#reservas">Reservar mesa</a>
-          <a class="button button--outline" href="#carta">Ver la carta</a>
+      <div class="hero-shade pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
+      <div class="mx-auto w-full max-w-content px-gutter pt-32 pb-12 sm:pb-16 md:py-20">
+        <h1 class="font-serif text-display leading-[0.98] tracking-[-0.055em]" id="hero-titulo">Sazón de Lima <span class="mt-[0.4em] block text-[0.54em] leading-none tracking-tight text-gold italic">— Cocina Criolla</span></h1>
+        <p class="mt-5 text-lead leading-snug">Tradición peruana en cada plato.</p>
+        <div class="mt-7 flex flex-wrap gap-3 motion-safe:animate-arrive">
+          <a class="action cursor-pointer bg-primary text-paper hover:bg-primary-dark active:bg-primary-dark" href="#reservas">
+            Reservar mesa
+            <svg class="size-4 shrink-0 fill-none stroke-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+          <a class="action border border-sand-muted text-paper hover:bg-paper hover:text-ink active:bg-cream" href="#carta">Ver la carta</a>
         </div>
       </div>
     </section>
 
-    <section class="section about" id="nosotros" aria-labelledby="nosotros-titulo" tabindex="-1">
-      <div class="container about__layout">
-        <div class="about__copy">
-          <h2 class="section__title" id="nosotros-titulo">Cocina criolla, <em>como en Lima</em></h2>
-          <p>La cocina de Sazón de Lima parte de las recetas criollas de siempre. Ají amarillo, culantro fresco y el fuego vivo de la sartén dan carácter a una carta pensada para compartir.</p>
-          <p>Elegimos insumos frescos y respetamos el sabor de cada receta, del ceviche al limón al lomo saltado recién hecho.</p>
+    <section class="py-section" id="nosotros" aria-labelledby="nosotros-titulo" tabindex="-1">
+      <div class="mx-auto w-full max-w-content px-gutter grid gap-layout md:grid-cols-[0.85fr_1.15fr] md:items-center">
+        <div class="max-w-xl space-y-4">
+          <h2 class="font-serif text-section leading-[1.05] tracking-[-0.045em] text-pretty" id="nosotros-titulo">Cocina criolla, <em class="text-primary-dark dark:text-gold">como en Lima</em></h2>
+          <p class="text-muted dark:text-sand-muted">La cocina de Sazón de Lima parte de las recetas criollas de siempre. Ají amarillo, culantro fresco y el fuego vivo de la sartén dan carácter a una carta pensada para compartir.</p>
+          <p class="text-muted dark:text-sand-muted">Elegimos insumos frescos y respetamos el sabor de cada receta, del ceviche al limón al lomo saltado recién hecho.</p>
         </div>
-        <picture class="about__picture">
+        <picture class="block overflow-hidden rounded-2xl shadow-md ring-1 ring-line dark:ring-night-line">
           <source type="image/webp" srcset="assets/img/salon.webp">
-          <img class="about__image" src="assets/img/salon.png" width="880" height="503" loading="lazy" decoding="async" alt="Salón del restaurante con mesas de madera, plantas y lámparas cálidas">
+          <img class="aspect-[4/3] w-full object-cover md:aspect-[16/11]" src="assets/img/salon.png" width="880" height="503" loading="lazy" decoding="async" alt="Salón del restaurante con mesas de madera, plantas y lámparas cálidas">
         </picture>
       </div>
     </section>
 
-    <section class="section menu" id="carta" aria-labelledby="carta-titulo" tabindex="-1">
-      <div class="container">
-        <div class="section__intro">
-          <h2 class="section__title" id="carta-titulo">Carta destacada</h2>
-          <p>Seis clásicos de la mesa peruana.</p>
+    <section class="border-y border-line bg-paper py-section dark:border-night-line dark:bg-ember" id="carta" aria-labelledby="carta-titulo" tabindex="-1">
+      <div class="mx-auto w-full max-w-content px-gutter">
+        <div class="mb-8 max-w-3xl md:mb-12">
+          <h2 class="font-serif text-section leading-[1.05] tracking-[-0.045em] text-pretty" id="carta-titulo">Carta destacada</h2>
+          <p class="mt-2 text-muted dark:text-sand-muted">Seis clásicos de la mesa peruana.</p>
         </div>
-        <div class="menu__grid">
-          <article class="dish-card">
-            <picture>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:gap-6">
+          <article class="enter-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line bg-paper shadow-xs dark:border-night-line dark:bg-night">
+            <picture class="block overflow-hidden">
               <source type="image/webp" srcset="assets/img/lomo-saltado.webp">
-              <img class="dish-card__image" src="assets/img/lomo-saltado.png" width="640" height="337" loading="lazy" decoding="async" alt="Lomo salteado con tomate y cebolla, acompañado de arroz y papas fritas">
+              <img class="aspect-[16/11] w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.03]" src="assets/img/lomo-saltado.png" width="640" height="337" loading="lazy" decoding="async" alt="Lomo salteado con tomate y cebolla, acompañado de arroz y papas fritas">
             </picture>
-            <div class="dish-card__content">
-              <div class="dish-card__heading">
-                <h3 class="dish-card__title">Lomo Saltado</h3>
-                <p class="dish-card__price">S/&nbsp;42.00</p>
+            <div class="grid gap-3 p-4 sm:p-5 text-muted dark:text-sand-muted">
+              <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+                <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-ink dark:text-sand">Lomo Saltado</h3>
+                <p class="shrink-0 rounded-full bg-cream px-2.5 py-0.5 text-sm leading-6 font-bold text-primary-dark dark:bg-ember dark:text-gold">S/&nbsp;42.00</p>
               </div>
               <p>Res salteada a fuego vivo con cebolla morada y tomate, servida con papas doradas y arroz.</p>
             </div>
           </article>
-          <article class="dish-card">
-            <picture>
+          <article class="enter-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line bg-paper shadow-xs dark:border-night-line dark:bg-night">
+            <picture class="block overflow-hidden">
               <source type="image/webp" srcset="assets/img/aji-de-gallina.webp">
-              <img class="dish-card__image" src="assets/img/aji-de-gallina.png" width="576" height="576" loading="lazy" decoding="async" alt="Ají de gallina con arroz, rodajas de papa, huevo y aceitunas negras">
+              <img class="aspect-[16/11] w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.03]" src="assets/img/aji-de-gallina.png" width="576" height="576" loading="lazy" decoding="async" alt="Ají de gallina con arroz, rodajas de papa, huevo y aceitunas negras">
             </picture>
-            <div class="dish-card__content">
-              <div class="dish-card__heading">
-                <h3 class="dish-card__title">Ají de Gallina</h3>
-                <p class="dish-card__price">S/&nbsp;36.00</p>
+            <div class="grid gap-3 p-4 sm:p-5 text-muted dark:text-sand-muted">
+              <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+                <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-ink dark:text-sand">Ají de Gallina</h3>
+                <p class="shrink-0 rounded-full bg-cream px-2.5 py-0.5 text-sm leading-6 font-bold text-primary-dark dark:bg-ember dark:text-gold">S/&nbsp;36.00</p>
               </div>
               <p>Pollo deshilachado en crema de ají amarillo, con arroz, papa, huevo y aceitunas.</p>
             </div>
           </article>
-          <article class="dish-card">
-            <picture>
+          <article class="enter-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line bg-paper shadow-xs dark:border-night-line dark:bg-night">
+            <picture class="block overflow-hidden">
               <source type="image/webp" srcset="assets/img/ceviche-clasico.webp">
-              <img class="dish-card__image dish-card__image--ceviche" src="assets/img/ceviche-clasico.png" width="640" height="357" loading="lazy" decoding="async" alt="Ceviche de pescado con cebolla morada, ají, camote y cancha">
+              <img class="aspect-[16/11] w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.03] object-[62%_center]" src="assets/img/ceviche-clasico.png" width="640" height="357" loading="lazy" decoding="async" alt="Ceviche de pescado con cebolla morada, ají, camote y cancha">
             </picture>
-            <div class="dish-card__content">
-              <div class="dish-card__heading">
-                <h3 class="dish-card__title">Ceviche Clásico</h3>
-                <p class="dish-card__price">S/&nbsp;38.00</p>
+            <div class="grid gap-3 p-4 sm:p-5 text-muted dark:text-sand-muted">
+              <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+                <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-ink dark:text-sand">Ceviche Clásico</h3>
+                <p class="shrink-0 rounded-full bg-cream px-2.5 py-0.5 text-sm leading-6 font-bold text-primary-dark dark:bg-ember dark:text-gold">S/&nbsp;38.00</p>
               </div>
               <p>Pescado al limón con ají y cebolla morada, acompañado de camote y cancha crocante.</p>
             </div>
           </article>
-          <article class="dish-card">
-            <picture>
+          <article class="enter-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line bg-paper shadow-xs dark:border-night-line dark:bg-night">
+            <picture class="block overflow-hidden">
               <source type="image/webp" srcset="assets/img/arroz-con-pollo.webp">
-              <img class="dish-card__image" src="assets/img/arroz-con-pollo.png" width="576" height="576" loading="lazy" decoding="async" alt="Presa de pollo dorada sobre arroz al culantro con salsa criolla">
+              <img class="aspect-[16/11] w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.03]" src="assets/img/arroz-con-pollo.png" width="576" height="576" loading="lazy" decoding="async" alt="Presa de pollo dorada sobre arroz al culantro con salsa criolla">
             </picture>
-            <div class="dish-card__content">
-              <div class="dish-card__heading">
-                <h3 class="dish-card__title">Arroz con Pollo</h3>
-                <p class="dish-card__price">S/&nbsp;34.00</p>
+            <div class="grid gap-3 p-4 sm:p-5 text-muted dark:text-sand-muted">
+              <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+                <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-ink dark:text-sand">Arroz con Pollo</h3>
+                <p class="shrink-0 rounded-full bg-cream px-2.5 py-0.5 text-sm leading-6 font-bold text-primary-dark dark:bg-ember dark:text-gold">S/&nbsp;34.00</p>
               </div>
               <p>Arroz al culantro con verduras, pollo dorado y un toque fresco de salsa criolla.</p>
             </div>
           </article>
-          <article class="dish-card">
-            <picture>
+          <article class="enter-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line bg-paper shadow-xs dark:border-night-line dark:bg-night">
+            <picture class="block overflow-hidden">
               <source type="image/webp" srcset="assets/img/tallarines-verdes.webp">
-              <img class="dish-card__image" src="assets/img/tallarines-verdes.png" width="640" height="349" loading="lazy" decoding="async" alt="Tallarines en salsa verde con queso rallado y bistec dorado">
+              <img class="aspect-[16/11] w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.03]" src="assets/img/tallarines-verdes.png" width="640" height="349" loading="lazy" decoding="async" alt="Tallarines en salsa verde con queso rallado y bistec dorado">
             </picture>
-            <div class="dish-card__content">
-              <div class="dish-card__heading">
-                <h3 class="dish-card__title">Tallarines Verdes con Bistec</h3>
-                <p class="dish-card__price">S/&nbsp;40.00</p>
+            <div class="grid gap-3 p-4 sm:p-5 text-muted dark:text-sand-muted">
+              <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+                <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-ink dark:text-sand">Tallarines Verdes con Bistec</h3>
+                <p class="shrink-0 rounded-full bg-cream px-2.5 py-0.5 text-sm leading-6 font-bold text-primary-dark dark:bg-ember dark:text-gold">S/&nbsp;40.00</p>
               </div>
               <p>Pasta en salsa de albahaca, espinaca y queso fresco con bistec a la plancha.</p>
             </div>
           </article>
-          <article class="dish-card">
-            <picture>
+          <article class="enter-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line bg-paper shadow-xs dark:border-night-line dark:bg-night">
+            <picture class="block overflow-hidden">
               <source type="image/webp" srcset="assets/img/causa-limena.webp">
-              <img class="dish-card__image" src="assets/img/causa-limena.png" width="576" height="576" loading="lazy" decoding="async" alt="Causa de papa amarilla en capas, con relleno de pollo y palta">
+              <img class="aspect-[16/11] w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.03]" src="assets/img/causa-limena.png" width="576" height="576" loading="lazy" decoding="async" alt="Causa de papa amarilla en capas, con relleno de pollo y palta">
             </picture>
-            <div class="dish-card__content">
-              <div class="dish-card__heading">
-                <h3 class="dish-card__title">Causa Limeña</h3>
-                <p class="dish-card__price">S/&nbsp;26.00</p>
+            <div class="grid gap-3 p-4 sm:p-5 text-muted dark:text-sand-muted">
+              <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+                <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-ink dark:text-sand">Causa Limeña</h3>
+                <p class="shrink-0 rounded-full bg-cream px-2.5 py-0.5 text-sm leading-6 font-bold text-primary-dark dark:bg-ember dark:text-gold">S/&nbsp;26.00</p>
               </div>
               <p>Papa amarilla con limón y ají, rellena de pollo y palta.</p>
             </div>
           </article>
         </div>
-        <p class="menu__note">Precios referenciales para fines demostrativos.</p>
+        <p class="mt-5 text-sm text-muted dark:text-sand-muted">Precios referenciales para fines demostrativos.</p>
       </div>
     </section>
 
-    <section class="section experience" id="experiencia" aria-labelledby="experiencia-titulo" tabindex="-1">
-      <div class="container">
-        <div class="section__intro">
-          <h2 class="section__title" id="experiencia-titulo">Especialidades y experiencia</h2>
-          <p>De la cocina a una mesa para compartir.</p>
+    <section class="bg-ink py-section text-sand dark:bg-hero" id="experiencia" aria-labelledby="experiencia-titulo" tabindex="-1">
+      <div class="mx-auto w-full max-w-content px-gutter">
+        <div class="mb-8 max-w-3xl md:mb-12">
+          <h2 class="font-serif text-section leading-[1.05] tracking-[-0.045em] text-pretty" id="experiencia-titulo">Especialidades y experiencia</h2>
+          <p class="mt-2 text-sand-muted">De la cocina a una mesa para compartir.</p>
         </div>
-        <div class="experience__gallery">
-          <picture class="experience__picture">
+        <div class="grid gap-4 md:grid-cols-[4fr_6fr] md:gap-6">
+          <picture class="block aspect-[16/10] overflow-hidden rounded-2xl md:aspect-auto md:h-[clamp(15rem,29vw,24rem)]">
             <source type="image/webp" srcset="assets/img/emplatado.webp">
-            <img class="experience__image" src="assets/img/emplatado.png" width="720" height="480" loading="lazy" decoding="async" alt="Cocinero terminando el emplatado de una causa en un plato azul">
+            <img class="h-full w-full object-cover" src="assets/img/emplatado.png" width="720" height="480" loading="lazy" decoding="async" alt="Cocinero terminando el emplatado de una causa en un plato azul">
           </picture>
-          <picture class="experience__picture">
+          <picture class="block aspect-[16/10] overflow-hidden rounded-2xl md:aspect-auto md:h-[clamp(15rem,29vw,24rem)]">
             <source type="image/webp" srcset="assets/img/mesa-servida.webp">
-            <img class="experience__image" src="assets/img/mesa-servida.png" width="880" height="491" loading="lazy" decoding="async" alt="Mesa servida con ceviche, causa y lomo saltado junto a un ventanal con vista a Lima">
+            <img class="h-full w-full object-cover" src="assets/img/mesa-servida.png" width="880" height="491" loading="lazy" decoding="async" alt="Mesa servida con ceviche, causa y lomo saltado junto a un ventanal con vista a Lima">
           </picture>
         </div>
-        <ul class="experience__pillars">
-          <li class="experience__pillar">
-            <h3>Sazón al momento</h3>
-            <p>El lomo pasa de la sartén a la mesa para conservar su jugo y el aroma del salteado.</p>
+        <ul class="mt-8 grid list-none gap-5 sm:grid-cols-3 md:mt-10 md:gap-6">
+          <li class="border-t border-night-line pt-4">
+            <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-gold">Sazón al momento</h3>
+            <p class="mt-2 text-sand-muted">El lomo pasa de la sartén a la mesa para conservar su jugo y el aroma del salteado.</p>
           </li>
-          <li class="experience__pillar">
-            <h3>Ajíes peruanos</h3>
-            <p>El ají amarillo aporta cuerpo a las cremas y el ají fresco da vida al ceviche.</p>
+          <li class="border-t border-night-line pt-4">
+            <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-gold">Ajíes peruanos</h3>
+            <p class="mt-2 text-sand-muted">El ají amarillo aporta cuerpo a las cremas y el ají fresco da vida al ceviche.</p>
           </li>
-          <li class="experience__pillar">
-            <h3>Hospitalidad criolla</h3>
-            <p>Una mesa sin prisa para conversar, servir al centro y probar un poco de todo.</p>
+          <li class="border-t border-night-line pt-4">
+            <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl text-gold">Hospitalidad criolla</h3>
+            <p class="mt-2 text-sand-muted">Una mesa sin prisa para conversar, servir al centro y probar un poco de todo.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section booking" id="reservas" aria-labelledby="reservas-titulo" tabindex="-1">
-      <div class="container booking__layout">
-        <div class="booking__intro">
-          <h2 class="section__title" id="reservas-titulo">Reserva tu mesa</h2>
-          <p>Elige una fecha, una hora y el tamaño de tu grupo.</p>
-          <aside class="booking__notice" id="aviso-reserva" aria-label="Información de la demostración">
+    <section class="py-section" id="reservas" aria-labelledby="reservas-titulo" tabindex="-1">
+      <div class="mx-auto w-full max-w-content px-gutter grid gap-layout lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="min-w-0">
+          <h2 class="font-serif text-section leading-[1.05] tracking-[-0.045em] text-pretty" id="reservas-titulo">Reserva tu mesa</h2>
+          <p class="mt-2 text-muted dark:text-sand-muted">Elige una fecha, una hora y el tamaño de tu grupo.</p>
+          <aside class="mt-6 max-w-md rounded-r-xl border-s-4 border-primary bg-paper p-4 text-sm dark:border-secondary dark:bg-ember" id="aviso-reserva" aria-label="Información de la demostración">
             <strong>Demostración de portafolio</strong>
-            <p>Usa datos de ejemplo. El formulario valida los campos en tu navegador y es una práctica sin reservas reales.</p>
+            <p class="mt-2 text-muted dark:text-sand-muted">Usa datos de ejemplo. El formulario valida los campos en tu navegador y es una práctica sin reservas reales.</p>
           </aside>
         </div>
         <!-- Los campos carecen de name para excluir sus valores del GET sin JavaScript. -->
-        <form class="booking__form" id="formulario-reserva" action="index.html#reserva-validada" method="get" aria-labelledby="reservas-titulo" aria-describedby="aviso-reserva">
-          <div class="booking__field booking__field--wide">
-            <label for="nombre">Nombre completo</label>
-            <input id="nombre" type="text" autocomplete="name" minlength="3" required>
+        <form class="grid min-w-0 gap-5 rounded-2xl border border-line bg-paper p-4 shadow-xs sm:grid-cols-2 sm:p-6 lg:p-8 dark:border-night-line dark:bg-ember" id="formulario-reserva" action="index.html#reserva-validada" method="get" aria-labelledby="reservas-titulo" aria-describedby="aviso-reserva">
+          <div class="grid min-w-0 content-start gap-1.5 sm:col-span-2">
+            <label class="text-sm font-bold" for="nombre">Nombre completo</label>
+            <input class="reservation-input" id="nombre" type="text" autocomplete="name" minlength="3" required>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-nombre" hidden>Escribe un nombre de al menos 3 caracteres.</small>
           </div>
-          <div class="booking__field">
-            <label for="correo">Correo electrónico</label>
-            <input id="correo" type="email" autocomplete="email" required>
+          <div class="grid min-w-0 content-start gap-1.5">
+            <label class="text-sm font-bold" for="correo">Correo electrónico</label>
+            <input class="reservation-input" id="correo" type="email" autocomplete="email" required>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-correo" hidden>Escribe un correo con formato válido.</small>
           </div>
-          <div class="booking__field">
-            <label for="telefono">Teléfono</label>
-            <input id="telefono" type="tel" autocomplete="tel" pattern="[0-9+\s\-]{7,15}" aria-describedby="ayuda-telefono" required>
-            <small class="booking__help" id="ayuda-telefono">De 7 a 15 caracteres (números, espacios, + o guion).</small>
+          <div class="grid min-w-0 content-start gap-1.5">
+            <label class="text-sm font-bold" for="telefono">Teléfono</label>
+            <input class="reservation-input" id="telefono" type="tel" autocomplete="tel" pattern="[0-9+\s\-]{7,15}" aria-describedby="ayuda-telefono" required>
+            <small class="text-xs leading-normal text-muted dark:text-sand-muted" id="ayuda-telefono">De 7 a 15 caracteres (números, espacios, + o guion).</small>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-telefono" hidden>Escribe un teléfono con el formato indicado.</small>
           </div>
-          <div class="booking__field">
-            <label for="fecha">Fecha</label>
-            <input id="fecha" type="date" required>
+          <div class="grid min-w-0 content-start gap-1.5">
+            <label class="text-sm font-bold" for="fecha">Fecha</label>
+            <input class="reservation-input" id="fecha" type="date" required>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-fecha" hidden>Elige una fecha válida.</small>
           </div>
-          <div class="booking__field">
-            <label for="hora">Hora</label>
-            <input id="hora" type="time" min="12:00" max="22:00" aria-describedby="ayuda-hora" required>
-            <small class="booking__help" id="ayuda-hora">Entre las 12:00 y las 22:00.</small>
+          <div class="grid min-w-0 content-start gap-1.5">
+            <label class="text-sm font-bold" for="hora">Hora</label>
+            <input class="reservation-input" id="hora" type="time" min="12:00" max="22:00" aria-describedby="ayuda-hora" required>
+            <small class="text-xs leading-normal text-muted dark:text-sand-muted" id="ayuda-hora">Entre las 12:00 y las 22:00.</small>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-hora" hidden>Elige una hora entre las 12:00 y las 22:00.</small>
           </div>
-          <div class="booking__field">
-            <label for="personas">Número de personas</label>
-            <input id="personas" type="number" min="1" max="12" required>
+          <div class="grid min-w-0 content-start gap-1.5">
+            <label class="text-sm font-bold" for="personas">Número de personas</label>
+            <input class="reservation-input" id="personas" type="number" min="1" max="12" required>
+            <small class="text-sm font-semibold text-danger dark:text-danger-night" id="error-personas" hidden>Escribe un número entero entre 1 y 12.</small>
           </div>
-          <div class="booking__actions">
-            <button class="button" type="submit">Validar reserva de prueba</button>
-            <p class="booking__status" id="estado-reserva" role="status"></p>
+          <div class="min-w-0 sm:col-span-2">
+            <button class="action cursor-pointer bg-primary text-paper hover:bg-primary-dark active:bg-primary-dark" type="submit">Validar reserva de prueba</button>
+            <p class="text-sm font-semibold text-success not-empty:mt-3 not-empty:rounded-lg not-empty:bg-success-soft not-empty:p-3 dark:text-success-night dark:not-empty:bg-success-deep" id="estado-reserva" role="status"></p>
+            <p class="text-sm font-semibold text-danger not-empty:mt-2 dark:text-danger-night" id="error-reserva" role="alert"></p>
           </div>
-          <noscript>
-            <p class="booking__status booking__status--fallback" id="reserva-validada" role="status" tabindex="-1">Validación exitosa. La demostración se completó.</p>
+          <noscript class="hidden has-[:target]:block sm:col-span-2">
+            <p class="hidden rounded-lg bg-success-soft p-3 text-sm font-semibold text-success target:block dark:bg-success-deep dark:text-success-night" id="reserva-validada" role="status" tabindex="-1">Validación exitosa. La demostración se completó.</p>
           </noscript>
         </form>
       </div>
     </section>
 
-    <section class="section location" id="ubicacion" aria-labelledby="ubicacion-titulo" tabindex="-1">
-      <div class="container">
-        <div class="section__intro">
-          <h2 class="section__title" id="ubicacion-titulo">Ubicación y horarios</h2>
-          <p>Información referencial del restaurante ficticio.</p>
+    <section class="border-t border-line bg-paper py-section dark:border-night-line dark:bg-ember" id="ubicacion" aria-labelledby="ubicacion-titulo" tabindex="-1">
+      <div class="mx-auto w-full max-w-content px-gutter">
+        <div class="mb-8 max-w-3xl md:mb-12">
+          <h2 class="font-serif text-section leading-[1.05] tracking-[-0.045em] text-pretty" id="ubicacion-titulo">Ubicación y horarios</h2>
+          <p class="mt-2 text-muted dark:text-sand-muted">Información referencial del restaurante ficticio.</p>
         </div>
-        <div class="location__grid">
-          <div class="location__item">
-            <h3>Dirección</h3>
-            <address>Av. Principal 123<br>Distrito Gastronómico, Lima</address>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          <div class="min-w-0 rounded-xl border border-line bg-cream p-4 wrap-anywhere sm:p-5 dark:border-night-line dark:bg-night">
+            <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl">Dirección</h3>
+            <address class="mt-2 not-italic text-muted dark:text-sand-muted">Av. Principal 123<br>Distrito Gastronómico, Lima</address>
           </div>
-          <div class="location__item">
-            <h3>Horario de atención</h3>
-            <p>Martes a domingo<br>12:00 p. m. a 10:00 p. m.</p>
+          <div class="min-w-0 rounded-xl border border-line bg-cream p-4 wrap-anywhere sm:p-5 dark:border-night-line dark:bg-night">
+            <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl">Horario de atención</h3>
+            <p class="mt-2 text-muted dark:text-sand-muted">Martes a domingo<br>12:00 p. m. a 10:00 p. m.</p>
           </div>
-          <div class="location__item">
-            <h3>Contacto</h3>
-            <address>+51 000 000 000<br>hola@sazondelima.example</address>
+          <div class="min-w-0 rounded-xl border border-line bg-cream p-4 wrap-anywhere sm:p-5 dark:border-night-line dark:bg-night">
+            <h3 class="min-w-0 font-serif text-xl leading-tight font-bold wrap-anywhere xl:text-2xl">Contacto</h3>
+            <address class="mt-2 not-italic text-muted dark:text-sand-muted">+51 000 000 000<br>hola@sazondelima.example</address>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <p class="footer__brand">Sazón de Lima <span>Cocina Criolla</span></p>
+  <footer class="bg-ink py-8 text-sand dark:bg-hero [--focus-color:var(--color-gold)]">
+    <div class="mx-auto w-full max-w-content px-gutter">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-night-line pb-5">
+        <p class="font-serif text-2xl leading-tight font-bold">Sazón de Lima <span class="mt-1 block font-sans text-[0.6875rem] leading-snug font-bold tracking-widest text-gold uppercase">Cocina Criolla</span></p>
         <nav aria-label="Navegación del pie de página">
-          <ul class="footer__links">
-            <li><a href="#carta">Carta</a></li>
-            <li><a href="#reservas">Reservas</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-            <li><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></li>
+          <ul class="flex list-none flex-wrap items-center gap-x-5">
+            <li><a class="inline-flex min-h-11 items-center gap-1.5 rounded-sm text-sm font-semibold hover:text-gold hover:underline hover:underline-offset-4 active:text-sand-muted" href="#carta">Carta</a></li>
+            <li><a class="inline-flex min-h-11 items-center gap-1.5 rounded-sm text-sm font-semibold hover:text-gold hover:underline hover:underline-offset-4 active:text-sand-muted" href="#reservas">Reservas</a></li>
+            <li><a class="inline-flex min-h-11 items-center gap-1.5 rounded-sm text-sm font-semibold hover:text-gold hover:underline hover:underline-offset-4 active:text-sand-muted" href="#ubicacion">Ubicación</a></li>
+            <li><a class="inline-flex min-h-11 items-center gap-1.5 rounded-sm text-sm font-semibold hover:text-gold hover:underline hover:underline-offset-4 active:text-sand-muted" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></li>
           </ul>
         </nav>
       </div>
-      <p class="footer__note">Sitio web demostrativo de diseño y desarrollo frontend para gastronomía. Marca, precios y datos de contacto ficticios.</p>
+      <p class="mt-4 text-sm text-sand-muted">Sitio web demostrativo de diseño y desarrollo frontend para gastronomía. Marca, precios y datos de contacto ficticios.</p>
     </div>
   </footer>
 </body>
