@@ -4,9 +4,9 @@
 
 **Repositorio:** https://github.com/Diego4422/core-a-sazon-de-lima
 
-Core A V1.5 es una landing comercial de portafolio para un restaurante peruano ficticio. Presenta seis platos criollos con precios referenciales, la experiencia del local y un formulario de reservas demostrativo.
+Sazón de Lima es una landing page demostrativa para un restaurante peruano ficticio. Presenta seis platos criollos con precios referenciales, la experiencia del local y un formulario de reservas demostrativo.
 
-## Tecnologías de las semanas 1 a 4
+## Tecnologías
 
 - HTML5 semántico con metadatos SEO y Open Graph, imágenes responsivas y validación nativa del formulario.
 - CSS puro con BEM, variables de diseño, Flexbox y Grid. La maquetación parte de pantallas de 320 px y respeta la preferencia de movimiento reducido.
