@@ -1,5 +1,9 @@
 # Sazón de Lima | Cocina Criolla
 
+**Demo en vivo:** https://core-a-sazon-de-lima.vercel.app/
+
+**Repositorio:** https://github.com/Diego4422/core-a-sazon-de-lima
+
 Core A V1.5 es una landing comercial de portafolio para un restaurante peruano ficticio. Presenta seis platos criollos con precios referenciales, la experiencia del local y un formulario de reservas demostrativo.
 
 ## Tecnologías de las semanas 1 a 4
